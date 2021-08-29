@@ -19,7 +19,7 @@ public class Controller {
     void startGame(){
         View.printMessage(View.GREETINGS_MESSAGE);
         boolean guessed=false;
-        while(guessed==false) {
+        while(!guessed) {
             View.printMessage(View.GUESS_IN_RANGE_MESSAGE, model.getLeftLimit(), model.getRightLimit());
 
             int value = getIntWithScanner();
@@ -70,7 +70,7 @@ public class Controller {
 
     public int getIntWithScanner() {
         View.printMessage(View.YOUR_INPUT_MESSAGE);
-        while(scanner.hasNextInt()==false){
+        while(!scanner.hasNextInt()){
             View.printMessage(View.INCORRECT_INPUT_MESSAGE);
             View.printMessage(View.YOUR_INPUT_MESSAGE);
             scanner.nextLine();

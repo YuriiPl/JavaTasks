@@ -1,6 +1,7 @@
 <h2 align="center">Java Development</h2>
 
 + :white_check_mark: [Homework №1](https://github.com/YuriiPl/JavaTasks/tree/master/lesson1) <details close> <summary>"Hello world!" </summary>
+
 ___Задание:___
 1.    _Написать программу, которая получает из командной строки сначала слово “Hello”, потом слово “world!”. Другие вводы игнорировать с соответствующим комментарием в командной строке._ 
 2.    _Из этих слов собирается предложение и выводится на экран._

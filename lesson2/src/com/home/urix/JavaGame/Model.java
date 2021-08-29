@@ -39,7 +39,7 @@ public class Model {
     StatList statList;
 
     public Model() {
-        this.value = new Random().nextInt(100);
+        this.value = new Random().nextInt(99)+1;
         statList = new StatList();
     }
 

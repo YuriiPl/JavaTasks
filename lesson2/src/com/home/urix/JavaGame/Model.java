@@ -60,7 +60,7 @@ public class Model {
     }
 
     public boolean isNotInRange(int value){
-        return value<getLeftLimit() || value>getRightLimit();
+        return value<=getLeftLimit() || value>=getRightLimit();
     }
 
     public boolean isGuessed (int value){
@@ -77,9 +77,9 @@ public class Model {
 
     public void changeLimits(int value){
         if(isBigger(value)){
-            setRightLimit(value-1);
+            setRightLimit(value);
         } else {
-            setLeftLimit(value+1);
+            setLeftLimit(value);
         }
     }
 

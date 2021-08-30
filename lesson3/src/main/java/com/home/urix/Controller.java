@@ -1,5 +1,6 @@
 package com.home.urix;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import static com.home.urix.GuessResult.*;
@@ -19,7 +20,7 @@ public class Controller {
     void startGame(){
         View.printGreeting();
 
-        model.startGame();
+        model.initGame();
 
         do {
             View.printGuessInRangeMessage(model.getLeftLimit(), model.getRightLimit());
@@ -31,14 +32,13 @@ public class Controller {
                 continue;
             }
 
-            GuessResult result = model.checkResult(userValue);
+            GuessResult result = model.processUserInput(userValue);
 
-            if(result == LESS)View.printLessMessage(userValue);
+            if(result == MANY)View.printLessMessage(userValue);
 
-            if(result == MORE)View.printMoreMessage(userValue);
+            if(result == FEW)View.printMoreMessage(userValue);
 
             if(result != EQUALS){
-                model.changeLimits(userValue);
                 View.printChangeLimitsMessage(model.getLeftLimit(), model.getRightLimit());
             }
 
@@ -50,7 +50,7 @@ public class Controller {
     }
 
     private void printStat() {
-        int[] attempts = model.getAttempts();
+        ArrayList<Integer> attempts = model.getAttempts();
         View.printAttempts(attempts);
     }
 
@@ -59,7 +59,7 @@ public class Controller {
         while(!scanner.hasNextInt()){
             View.printIncorrectInputMessage();
             View.printYourInputMessage();
-            scanner.nextLine();
+            while(scanner.nextLine().equals(""));
         }
         return scanner.nextInt();
     }

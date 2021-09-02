@@ -29,4 +29,8 @@ public class Controller {
     boolean checkLastName(String userInput){
         return userInput.matches(regexps.getString("check.string.regexp.lastname"));
     }
+
+    boolean checkFirstName(String userInput){
+        return userInput.matches(regexps.getString("check.string.regexp.firstname"));
+    }
 }

@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc79bb53-6dd5-4faf-9ded-75bbbe6283ae" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson4.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/regexps_uk_UA.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/regexps_uk_UA.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/regexps.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regexps.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/regexps_uk_UA.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regexps_uk_UA.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/messages_uk_UA.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/regexps.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/regexps_uk_UA.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="JUnit4 Test Class" />
         <option value="Interface" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -71,7 +72,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LastNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstNameTest.checkFirstName_standard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lesson4" />
       <extension name="coverage">
         <pattern>
@@ -80,29 +81,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.home.urix.lesson4" />
-      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.LastNameTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LastNameTest.checkLastName_hyphen_apostrophe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lesson4" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.home.urix.lesson4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.home.urix.lesson4" />
-      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.LastNameTest" />
-      <option name="METHOD_NAME" value="checkLastName_hyphen_apostrophe" />
+      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.FirstNameTest" />
+      <option name="METHOD_NAME" value="checkFirstName_standard" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LastNameTest.checkLastName_hyphen_double_apostrof" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstNameTest.checkFirstName_standard_space" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lesson4" />
       <extension name="coverage">
         <pattern>
@@ -111,14 +97,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.home.urix.lesson4" />
-      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.LastNameTest" />
-      <option name="METHOD_NAME" value="checkLastName_hyphen_double_apostrof" />
+      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.FirstNameTest" />
+      <option name="METHOD_NAME" value="checkFirstName_standard_space" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LastNameTest.checkLastName_russian_signs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstNameTest.checkLastName_russian_signs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lesson4" />
       <extension name="coverage">
         <pattern>
@@ -127,8 +113,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.home.urix.lesson4" />
-      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.LastNameTest" />
+      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.FirstNameTest" />
       <option name="METHOD_NAME" value="checkLastName_russian_signs" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirstNameTest.checkLastName_ukrainian_double_apostrophe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lesson4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.home.urix.lesson4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.home.urix.lesson4" />
+      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.FirstNameTest" />
+      <option name="METHOD_NAME" value="checkLastName_ukrainian_double_apostrophe" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,10 +139,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.LastNameTest" />
-        <item itemvalue="JUnit.LastNameTest.checkLastName_hyphen_apostrophe" />
-        <item itemvalue="JUnit.LastNameTest.checkLastName_russian_signs" />
-        <item itemvalue="JUnit.LastNameTest.checkLastName_hyphen_double_apostrof" />
+        <item itemvalue="JUnit.FirstNameTest.checkLastName_russian_signs" />
+        <item itemvalue="JUnit.FirstNameTest.checkLastName_ukrainian_double_apostrophe" />
+        <item itemvalue="JUnit.FirstNameTest.checkFirstName_standard_space" />
+        <item itemvalue="JUnit.FirstNameTest.checkFirstName_standard" />
       </list>
     </recent_temporary>
   </component>

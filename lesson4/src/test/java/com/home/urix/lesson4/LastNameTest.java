@@ -44,7 +44,7 @@ public class LastNameTest {
 
     @Test
     public void checkLastName_ukrainian_apostrophe () {
-        for (String str: new String[]{"Пом'янчук", "П'ятенко", "Дерев'яненко"}
+        for (String str: new String[]{"Пом'янчук", "Дерев'яненко", "П'ятенко"}
         ) {
             Assert.assertTrue(str,controller.checkLastName(str));
         }
@@ -59,8 +59,16 @@ public class LastNameTest {
     }
 
     @Test
+    public void checkLastName_ukrainian_apostrophe_borders () {
+        for (String str: new String[]{"'Петренко", "Петренко'", "'Петренко'"}
+        ) {
+            Assert.assertFalse(str,controller.checkLastName(str));
+        }
+    }
+
+    @Test
     public void checkLastName_russian_signs () {
-        for (String str: new String[]{"Подъёмов", "Объездов", "Ёжиков", "Эбуталыбова", "Эндэров", "Евдышев", "Бабарэко"}
+        for (String str: new String[]{"Подъёмов", "Объездов", "Ёжиков", "Эбуталылов", "Эскандэров", "Евдышеев", "Бабарэк"}
         ) {
             Assert.assertFalse(str,controller.checkLastName(str));
         }
@@ -83,8 +91,24 @@ public class LastNameTest {
     }
 
     @Test
+    public void checkLastName_hyphen_small_apostrophe_many () {
+        for (String str: new String[]{"Нечуй---Левицький","П''''ятенко","М'яка----П'''ятенко"}
+        ) {
+            Assert.assertFalse(str,controller.checkLastName(str));
+        }
+    }
+
+    @Test
+    public void checkLastName_hyphen_apostrophe () {
+        for (String str: new String[]{"Нечуй-'Левицький","П'-ятенко","М'яка'-'П'ятенко","Мяка'-'Пятенко"}
+        ) {
+            Assert.assertFalse(str,controller.checkLastName(str));
+        }
+    }
+
+    @Test
     public void checkLastName_hyphen_double_apostrof () {
-        for (String str: new String[]{"Неч'уй-Левиць'кий"}
+        for (String str: new String[]{"М'яка-П'ятенко","П'ятенко-М'яка"}
         ) {
             Assert.assertTrue(str,controller.checkLastName(str));
         }

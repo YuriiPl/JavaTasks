@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc79bb53-6dd5-4faf-9ded-75bbbe6283ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/GroupsEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/TextFactory.java" afterDir="false" />
+    <list default="true" id="cc79bb53-6dd5-4faf-9ded-75bbbe6283ae" name="Changes" comment="Refactoring + add some regexp (ua) until 10">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/AddressTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/CheckSkypeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/PhoneTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/regexps.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regexps.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/regexps_uk_UA.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regexps_uk_UA.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/LastNameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/LastNameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +27,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="JUnit4 Test Class" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -42,7 +49,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Сourse/Materials/Code examples/Registration form/registration form var1/Test20170926" />
+    <property name="last_opened_file_path" value="Y:/land_ua.properties" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -56,7 +63,7 @@
       <recent name="com.home.urix.lesson4" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.AddressTest.checkCityTest_false_us">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.Main" />
       <module name="lesson4" />
@@ -70,7 +77,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstNameTest.checkFirstName_standard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AddressTest.checkCityTest_false_us" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lesson4" />
       <extension name="coverage">
         <pattern>
@@ -79,14 +86,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.home.urix.lesson4" />
-      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.FirstNameTest" />
-      <option name="METHOD_NAME" value="checkFirstName_standard" />
+      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.AddressTest" />
+      <option name="METHOD_NAME" value="checkCityTest_false_us" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstNameTest.checkFirstName_standard_space" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AddressTest.checkCityTest_ok_us" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lesson4" />
       <extension name="coverage">
         <pattern>
@@ -95,14 +102,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.home.urix.lesson4" />
-      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.FirstNameTest" />
-      <option name="METHOD_NAME" value="checkFirstName_standard_space" />
+      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.AddressTest" />
+      <option name="METHOD_NAME" value="checkCityTest_ok_us" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstNameTest.checkLastName_russian_signs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PhoneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lesson4" />
       <extension name="coverage">
         <pattern>
@@ -111,14 +118,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.home.urix.lesson4" />
-      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.FirstNameTest" />
-      <option name="METHOD_NAME" value="checkLastName_russian_signs" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.PhoneTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstNameTest.checkLastName_ukrainian_double_apostrophe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PhoneTest.checkHomePhoneTest_usa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lesson4" />
       <extension name="coverage">
         <pattern>
@@ -127,8 +133,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.home.urix.lesson4" />
-      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.FirstNameTest" />
-      <option name="METHOD_NAME" value="checkLastName_ukrainian_double_apostrophe" />
+      <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.PhoneTest" />
+      <option name="METHOD_NAME" value="checkHomePhoneTest_usa" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -136,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AddressTest.checkCityTest_false_us" />
+        <item itemvalue="JUnit.AddressTest.checkCityTest_ok_us" />
+        <item itemvalue="JUnit.PhoneTest.checkHomePhoneTest_usa" />
+        <item itemvalue="JUnit.PhoneTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.FirstNameTest.checkLastName_russian_signs" />
-        <item itemvalue="JUnit.FirstNameTest.checkLastName_ukrainian_double_apostrophe" />
-        <item itemvalue="JUnit.FirstNameTest.checkFirstName_standard_space" />
-        <item itemvalue="JUnit.FirstNameTest.checkFirstName_standard" />
       </list>
     </recent_temporary>
   </component>
@@ -153,6 +159,14 @@
       <option name="presentableId" value="Default" />
       <updated>1630489833063</updated>
     </task>
+    <task id="LOCAL-00001" summary="Refactoring + add some regexp (ua) until 10">
+      <created>1630710169779</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1630710169779</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +180,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactoring + add some regexp (ua) until 10" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring + add some regexp (ua) until 10" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

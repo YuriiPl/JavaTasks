@@ -15,7 +15,8 @@ public class LastNameTest {
     @Before
     public void before(){
         Locale locale = new Locale("uk","UA");
-        controller = new Controller(new Model(),new View(locale));
+        TextFactory.changeLocale(locale);
+        controller = new Controller(new Model(),new View());
     }
 
     @Test
@@ -52,7 +53,7 @@ public class LastNameTest {
 
     @Test
     public void checkLastName_ukrainian_double_apostrophe () {
-        for (String str: new String[]{"Пом'янч'ук", "П'ятен'ко", "Дерев'янен'ко"}
+        for (String str: new String[]{"Пом'янч'ук", "П'ятен'ко", "Дерев'янен'ко-П'ятен'ко"}
         ) {
             Assert.assertFalse(str,controller.checkLastName(str));
         }

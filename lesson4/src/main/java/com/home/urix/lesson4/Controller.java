@@ -24,6 +24,7 @@ public class Controller {
 //        while(checkLastName(userInput=scanner.nextLine()));
 //        model.setSetLastName(userInput);
 
+        System.out.println(Pattern.matches(TextFactory.getRegExpString("check.string.regexp.midname"),""));
 
     }
 
@@ -65,6 +66,30 @@ public class Controller {
         if (TextFactory.getRegExpString("check.string.regexp.group.manager").equals(userInput)) return GroupsEnum.MANAGER;
         if (TextFactory.getRegExpString("check.string.regexp.group.user").equals(userInput)) return GroupsEnum.USER;
         return GroupsEnum.ERROR_GROUP;
+    }
+
+    boolean checkEmail(String userInput){
+        return userInput.matches(TextFactory.getRegExpString("check.string.regexp.email"));
+    }
+
+    boolean checkSkype(String userInput){
+        return userInput.matches(TextFactory.getRegExpString("check.string.regexp.skype"));
+    }
+
+    boolean checkIndex(String userInput){
+        return userInput.matches(TextFactory.getRegExpString("check.string.regexp.zipcode"));
+    }
+
+    boolean checkCity(String userInput){
+        return userInput.matches(TextFactory.getRegExpString("check.string.regexp.city"));
+    }
+
+    boolean checkStreet(String userInput){
+        return userInput.matches(TextFactory.getRegExpString("check.string.regexp.street"));
+    }
+
+    boolean checkHouseNumber(String userInput){
+        return userInput.matches(TextFactory.getRegExpString("check.string.regexp.housenumber"));
     }
 
 }

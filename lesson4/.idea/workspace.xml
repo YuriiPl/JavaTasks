@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc79bb53-6dd5-4faf-9ded-75bbbe6283ae" name="Changes" comment="Add NoteBookRecord, NoteBook + Refactoring">
+    <list default="true" id="cc79bb53-6dd5-4faf-9ded-75bbbe6283ae" name="Changes" comment="Add View skeleton + Refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/NoteBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/NoteBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/NoteBookRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/NoteBookRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/TextFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/TextFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/regexps.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regexps.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_uk_UA.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_uk_UA.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630870118790</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add View skeleton + Refactoring">
+      <created>1630877867882</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1630877867882</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -185,7 +192,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactoring + add some regexp (ua) until 10" />
     <MESSAGE value="Add NoteBookRecord, NoteBook + Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add NoteBookRecord, NoteBook + Refactoring" />
+    <MESSAGE value="Add View skeleton + Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add View skeleton + Refactoring" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

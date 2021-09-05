@@ -23,69 +23,117 @@ public class Controller {
         NoteBookRecord record = new NoteBookRecord();
 
         view.inputLastNameMessage();
-        while(!checkLastName(userInput=scanner.nextLine()))view.inputLastNameMessage();
+        while(!checkLastName(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputLastNameMessage();
+        }
         record.setLastname(userInput);
 
         view.inputFirstNameMessage();
-        while(!checkFirstName(userInput=scanner.nextLine()))view.inputFirstNameMessage();
+        while(!checkFirstName(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputFirstNameMessage();
+        }
         record.setFirstname(userInput);
 
         view.inputPatronymicMessage();
-        while(!checkPatronomic(userInput=scanner.nextLine()))view.inputPatronymicMessage();
+        while(!checkPatronomic(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputPatronymicMessage();
+        }
         record.setPatronymic(userInput);
 
         view.inputNicknameMessage();
-        while(!checkNickName(userInput=scanner.nextLine()))view.inputNicknameMessage();
+        while(!checkNickName(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputNicknameMessage();
+        }
         record.setNickName(userInput);
 
         view.inputCommentMessage();
-        while(!checkComment(userInput=scanner.nextLine()))view.inputCommentMessage();
+        while(!checkComment(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputCommentMessage();
+        }
         record.setComment(userInput);
 
         GroupsEnum group;
         view.inputEnterGroupMessage();
-        while((group=toGroup(scanner.nextLine()))==GroupsEnum.ERROR_GROUP)view.inputEnterGroupMessage();
+        while((group=toGroup(scanner.nextLine()))==GroupsEnum.ERROR_GROUP) {
+            view.inputWrongDataMessage();
+            view.inputEnterGroupMessage();
+        }
         record.setGroup(group);
 
         view.inputHomePhoneMessage();
-        while(!checkHomePhone(userInput=scanner.nextLine()))view.inputHomePhoneMessage();
+        while(!checkHomePhone(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputHomePhoneMessage();
+        }
         record.setHomePhone(userInput);
 
         view.inputMobilePhoneMessage();
-        while(!checkMobilePhone(userInput=scanner.nextLine()))view.inputMobilePhoneMessage();
+        while(!checkMobilePhone(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputMobilePhoneMessage();
+        }
         record.setMobPhone(userInput);
 
         view.inputSecondMobilePhoneMessage();
-        while(!checkMobilePhone2(userInput=scanner.nextLine()))view.inputSecondMobilePhoneMessage();
+        while(!checkMobilePhone2(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputSecondMobilePhoneMessage();
+        }
         record.setSecondMobilePhone(userInput);
 
         view.inputEmailMessage();
-        while(!checkEmail(userInput=scanner.nextLine()))view.inputEmailMessage();
+        while(!checkEmail(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputEmailMessage();
+        }
         record.setEmail(userInput);
 
         view.inputSkypeMessage();
-        while(!checkSkype(userInput=scanner.nextLine()))view.inputSkypeMessage();
+        while(!checkSkype(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputSkypeMessage();
+        }
         record.setSkype(userInput);
 
         NoteBookRecord.Address address = record.new Address();
         view.inputZipCodeMessage();
-        while(!checkZipCode(userInput=scanner.nextLine()))view.inputZipCodeMessage();
+        while(!checkZipCode(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputZipCodeMessage();
+        }
         address.setZipCode(userInput);
 
         view.inputCityMessage();
-        while(!checkCity(userInput=scanner.nextLine()))view.inputCityMessage();
+        while(!checkCity(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputCityMessage();
+        }
         address.setCity(userInput);
 
         view.inputStreetMessage();
-        while(!checkStreet(userInput=scanner.nextLine()))view.inputStreetMessage();
+        while(!checkStreet(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputStreetMessage();
+        }
         address.setStreet(userInput);
 
         view.inputHouseNumberMessage();
-        while(!checkHouseNumber(userInput=scanner.nextLine()))view.inputHouseNumberMessage();
+        while(!checkHouseNumber(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputHouseNumberMessage();
+        }
         address.setHouseNum(userInput);
 
         view.inputFlatNumberMessage();
-        while(!checkFlatNumber(userInput=scanner.nextLine()))view.inputFlatNumberMessage();
+        while(!checkFlatNumber(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputFlatNumberMessage();
+        }
         address.setFlatNum(userInput);
 
         record.setAddress(address);

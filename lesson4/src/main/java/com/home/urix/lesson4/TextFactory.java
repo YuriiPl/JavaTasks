@@ -16,7 +16,9 @@ public class TextFactory {
     }
 
     static public String getString(String str){
-        return messages.getString(str);
+        if(messages.containsKey(str))
+            return messages.getString(str);
+        return messages.getString("input.string.unknown.id")+str;
     }
 
     static public String getRegExpString(String str){

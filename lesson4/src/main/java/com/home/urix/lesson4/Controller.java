@@ -180,9 +180,9 @@ public class Controller {
     }
 
     GroupsEnum toGroup(String userInput){
-        if (TextFactory.getRegExpString("check.string.regexp.group.admin").equals(userInput)) return GroupsEnum.ADMIN;
-        if (TextFactory.getRegExpString("check.string.regexp.group.manager").equals(userInput)) return GroupsEnum.MANAGER;
-        if (TextFactory.getRegExpString("check.string.regexp.group.user").equals(userInput)) return GroupsEnum.USER;
+        if (userInput.matches(TextFactory.getRegExpString("check.string.regexp.group.admin"))) return GroupsEnum.ADMIN;
+        if (userInput.matches(TextFactory.getRegExpString("check.string.regexp.group.manager"))) return GroupsEnum.MANAGER;
+        if (userInput.matches(TextFactory.getRegExpString("check.string.regexp.group.user"))) return GroupsEnum.USER;
         return GroupsEnum.ERROR_GROUP;
     }
 

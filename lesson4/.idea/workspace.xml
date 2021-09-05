@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc79bb53-6dd5-4faf-9ded-75bbbe6283ae" name="Changes" comment="Fix two message IDs">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_uk_UA.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_uk_UA.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/regexps_uk_UA.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regexps_uk_UA.properties" afterDir="false" />
-    </list>
+    <list default="true" id="cc79bb53-6dd5-4faf-9ded-75bbbe6283ae" name="Changes" comment="Fix error in &quot;toGroup&quot;. Refactor messages+regexps." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.AddressTest.checkCityTest_false_us" />
-        <item itemvalue="JUnit.AddressTest.checkCityTest_ok_us" />
         <item itemvalue="JUnit.PhoneTest.checkHomePhoneTest_usa" />
         <item itemvalue="JUnit.PhoneTest" />
+        <item itemvalue="JUnit.AddressTest.checkCityTest_ok_us" />
+        <item itemvalue="JUnit.AddressTest.checkCityTest_false_us" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

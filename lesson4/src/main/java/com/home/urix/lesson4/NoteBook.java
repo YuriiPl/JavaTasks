@@ -16,7 +16,7 @@ public class NoteBook {
      * Add user object to model
      * @param record - The added user
      */
-    public void addRecord(NoteBookRecord record){
+    public void insertRecord(NoteBookRecord record){
         recordsList.add(record);
     }
 }

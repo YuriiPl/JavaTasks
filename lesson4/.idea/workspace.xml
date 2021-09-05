@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc79bb53-6dd5-4faf-9ded-75bbbe6283ae" name="Changes" comment="Refactoring + add some regexp (ua) until 10">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/NoteBookRecord.java" afterDir="false" />
+    <list default="true" id="cc79bb53-6dd5-4faf-9ded-75bbbe6283ae" name="Changes" comment="Add NoteBookRecord, NoteBook + Refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/NoteBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/NoteBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/NoteBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/NoteBookRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/NoteBookRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/View.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/regexps.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regexps.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/regexps_uk_UA.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regexps_uk_UA.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/AddressTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/AddressTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/CheckSkypeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/CheckSkypeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/LastNameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/LastNameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/PhoneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/PhoneTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +57,7 @@
       <recent name="com.home.urix.lesson4" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AddressTest.checkCityTest_false_us">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.home.urix.lesson4.Main" />
       <module name="lesson4" />
@@ -141,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AddressTest.checkCityTest_false_us" />
         <item itemvalue="JUnit.AddressTest.checkCityTest_ok_us" />
         <item itemvalue="JUnit.PhoneTest.checkHomePhoneTest_usa" />
         <item itemvalue="JUnit.PhoneTest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630710169779</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add NoteBookRecord, NoteBook + Refactoring">
+      <created>1630870118790</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1630870118790</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,7 +184,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactoring + add some regexp (ua) until 10" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring + add some regexp (ua) until 10" />
+    <MESSAGE value="Add NoteBookRecord, NoteBook + Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add NoteBookRecord, NoteBook + Refactoring" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,19 +1,25 @@
 package com.home.urix.lesson4;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 public class NoteBookRecord {
     private String lastname;
     private String firstname;
     private String patronymic;
-    private String nick;
+    private String nickName;
     private String comment;
-    private String groupName;
+    private GroupsEnum group;
     private String mobPhone;
     private String homePhone;
-    private String secMobPhone;
+    private String secondMobilePhone;
     private String email;
     private String skype;
-    private String city;
     private Address address;
+    private Date inputDate;
+    private Date changedDate;
+
+
 
     public String getLastname() {
         return lastname;
@@ -39,12 +45,12 @@ public class NoteBookRecord {
         this.patronymic = patronymic;
     }
 
-    public String getNick() {
-        return nick;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setNick(String nick) {
-        this.nick = nick;
+    public void setNickName(String nick) {
+        this.nickName = nick;
     }
 
     public String getComment() {
@@ -55,12 +61,12 @@ public class NoteBookRecord {
         this.comment = comment;
     }
 
-    public String getGroupName() {
-        return groupName;
+    public GroupsEnum getGroup() {
+        return group;
     }
 
-    public void setGroupName(String groupName) {
-        this.groupName = groupName;
+    public void setGroup(GroupsEnum group) {
+        this.group = group;
     }
 
     public String getMobPhone() {
@@ -79,12 +85,10 @@ public class NoteBookRecord {
         this.homePhone = homePhone;
     }
 
-    public String getSecMobPhone() {
-        return secMobPhone;
-    }
+    public String getSecondMobilePhone() { return secondMobilePhone; }
 
-    public void setSecMobPhone(String secMobPhone) {
-        this.secMobPhone = secMobPhone;
+    public void setSecondMobilePhone(String secMobPhone) {
+        this.secondMobilePhone = secMobPhone;
     }
 
     public String getEmail() {
@@ -103,14 +107,6 @@ public class NoteBookRecord {
         this.skype = skype;
     }
 
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
     public Address getAddress() {
         return address;
     }
@@ -119,18 +115,43 @@ public class NoteBookRecord {
         this.address = address;
     }
 
+    public Date getInputDate() {
+        return inputDate;
+    }
+
+    public void setInputDate(Date inputDate) {
+        this.inputDate = inputDate;
+    }
+
+    public Date getChangedDate() {
+        return changedDate;
+    }
+
+    public void setChangedDate(Date changedDate) {
+        this.changedDate = changedDate;
+    }
+
     class Address{
-        private String index;
+        private String zipCode;
+        private String city;
         private String street;
         private String houseNum;
         private String flatNum;
 
-        public String getIndex() {
-            return index;
+        public String getZipCode() {
+            return zipCode;
         }
 
-        public void setIndex(String index) {
-            this.index = index;
+        public void setZipCode(String index) {
+            this.zipCode = index;
+        }
+
+        public String getCity() {
+            return city;
+        }
+
+        public void setCity(String city) {
+            this.city = city;
         }
 
         public String getStreet() {

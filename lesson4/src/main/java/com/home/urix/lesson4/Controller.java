@@ -2,29 +2,99 @@ package com.home.urix.lesson4;
 
 
 
+import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class Controller {
-    private NoteBook model;
+    private NoteBook noteBook;
     private View view;
     private ResourceBundle regexps;
     Scanner scanner;
 
     public Controller(NoteBook model, View view) {
-        this.model = model;
+        this.noteBook = model;
         this.view = view;
         scanner = new Scanner(System.in);
     }
 
     public void processRegistration(){
-//        view.inputLastNameMessage();
-//        String userInput;
-//        while(checkLastName(userInput=scanner.nextLine()));
-//        model.setSetLastName(userInput);
+        String userInput;
+        NoteBookRecord record = new NoteBookRecord();
 
-        System.out.println(Pattern.matches(TextFactory.getRegExpString("check.string.regexp.patronymic"),""));
+        view.inputLastNameMessage();
+        while(!checkLastName(userInput=scanner.nextLine()))view.inputLastNameMessage();
+        record.setLastname(userInput);
+
+        view.inputFirstNameMessage();
+        while(!checkFirstName(userInput=scanner.nextLine()))view.inputFirstNameMessage();
+        record.setFirstname(userInput);
+
+        view.inputPatronymicMessage();
+        while(!checkPatronomic(userInput=scanner.nextLine()))view.inputPatronymicMessage();
+        record.setPatronymic(userInput);
+
+        view.inputNicknameMessage();
+        while(!checkNickName(userInput=scanner.nextLine()))view.inputNicknameMessage();
+        record.setNickName(userInput);
+
+        view.inputCommentMessage();
+        while(!checkComment(userInput=scanner.nextLine()))view.inputCommentMessage();
+        record.setComment(userInput);
+
+        GroupsEnum group;
+        view.inputEnterGroupMessage();
+        while((group=toGroup(scanner.nextLine()))==GroupsEnum.ERROR_GROUP)view.inputEnterGroupMessage();
+        record.setGroup(group);
+
+        view.inputHomePhoneMessage();
+        while(!checkHomePhone(userInput=scanner.nextLine()))view.inputHomePhoneMessage();
+        record.setHomePhone(userInput);
+
+        view.inputMobilePhoneMessage();
+        while(!checkMobilePhone(userInput=scanner.nextLine()))view.inputMobilePhoneMessage();
+        record.setMobPhone(userInput);
+
+        view.inputSecondMobilePhoneMessage();
+        while(!checkMobilePhone2(userInput=scanner.nextLine()))view.inputSecondMobilePhoneMessage();
+        record.setSecondMobilePhone(userInput);
+
+        view.inputEmailMessage();
+        while(!checkEmail(userInput=scanner.nextLine()))view.inputEmailMessage();
+        record.setEmail(userInput);
+
+        view.inputSkypeMessage();
+        while(!checkSkype(userInput=scanner.nextLine()))view.inputSkypeMessage();
+        record.setSkype(userInput);
+
+        NoteBookRecord.Address address = record.new Address();
+        view.inputZipCodeMessage();
+        while(!checkZipCode(userInput=scanner.nextLine()))view.inputZipCodeMessage();
+        address.setZipCode(userInput);
+
+        view.inputCityMessage();
+        while(!checkCity(userInput=scanner.nextLine()))view.inputCityMessage();
+        address.setCity(userInput);
+
+        view.inputStreetMessage();
+        while(!checkStreet(userInput=scanner.nextLine()))view.inputStreetMessage();
+        address.setStreet(userInput);
+
+        view.inputHouseNumberMessage();
+        while(!checkHouseNumber(userInput=scanner.nextLine()))view.inputHouseNumberMessage();
+        address.setHouseNum(userInput);
+
+        view.inputFlatNumberMessage();
+        while(!checkFlatNumber(userInput=scanner.nextLine()))view.inputFlatNumberMessage();
+        address.setFlatNum(userInput);
+
+        record.setAddress(address);
+
+        record.setInputDate(new Date());
+
+        record.setChangedDate(new Date());
+
+        noteBook.insertRecord(record);
 
     }
 
@@ -36,7 +106,7 @@ public class Controller {
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.firstname"));
     }
 
-    boolean checkMidName(String userInput){
+    boolean checkPatronomic(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.patronymic"));
     }
 
@@ -76,7 +146,7 @@ public class Controller {
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.skype"));
     }
 
-    boolean checkIndex(String userInput){
+    boolean checkZipCode(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.zipcode"));
     }
 
@@ -90,6 +160,11 @@ public class Controller {
 
     boolean checkHouseNumber(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.housenumber"));
+    }
+
+    boolean checkFlatNumber(String userInput){
+        if(userInput.length()==0)return true;
+        return userInput.matches(TextFactory.getRegExpString("check.string.regexp.flatnumber"));
     }
 
 }

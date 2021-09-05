@@ -7,12 +7,12 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class Controller {
-    private Model model;
+    private NoteBook model;
     private View view;
     private ResourceBundle regexps;
     Scanner scanner;
 
-    public Controller(Model model, View view) {
+    public Controller(NoteBook model, View view) {
         this.model = model;
         this.view = view;
         scanner = new Scanner(System.in);
@@ -24,7 +24,7 @@ public class Controller {
 //        while(checkLastName(userInput=scanner.nextLine()));
 //        model.setSetLastName(userInput);
 
-        System.out.println(Pattern.matches(TextFactory.getRegExpString("check.string.regexp.midname"),""));
+        System.out.println(Pattern.matches(TextFactory.getRegExpString("check.string.regexp.patronymic"),""));
 
     }
 
@@ -37,7 +37,7 @@ public class Controller {
     }
 
     boolean checkMidName(String userInput){
-        return userInput.matches(TextFactory.getRegExpString("check.string.regexp.midname"));
+        return userInput.matches(TextFactory.getRegExpString("check.string.regexp.patronymic"));
     }
 
     boolean checkNickName(String userInput){

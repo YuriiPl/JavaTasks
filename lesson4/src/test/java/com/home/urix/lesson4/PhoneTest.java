@@ -6,15 +6,13 @@ import org.junit.Test;
 
 import java.util.Locale;
 
-import static org.junit.Assert.*;
-
 public class PhoneTest {
 
     Controller controller;
 
     @Before
     public void before(){
-        controller = new Controller(new Model(),new View());
+        controller = new Controller(new NoteBook(),new View());
     }
 
     @Test

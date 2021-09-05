@@ -6,8 +6,6 @@ import org.junit.Test;
 
 import java.util.Locale;
 
-import static org.junit.Assert.*;
-
 public class LastNameTest {
 
     Controller controller;
@@ -16,7 +14,7 @@ public class LastNameTest {
     public void before(){
         Locale locale = new Locale("uk","UA");
         TextFactory.changeLocale(locale);
-        controller = new Controller(new Model(),new View());
+        controller = new Controller(new NoteBook(),new View());
     }
 
     @Test

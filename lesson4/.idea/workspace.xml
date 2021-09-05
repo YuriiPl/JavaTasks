@@ -5,18 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc79bb53-6dd5-4faf-9ded-75bbbe6283ae" name="Changes" comment="Refactoring + add some regexp (ua) until 10">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/AddressTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/CheckSkypeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/PhoneTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/NoteBookRecord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/home/urix/lesson4/NoteBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/regexps.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regexps.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/regexps_uk_UA.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regexps_uk_UA.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/AddressTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/AddressTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/CheckSkypeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/CheckSkypeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/LastNameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/LastNameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/PhoneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/home/urix/lesson4/PhoneTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,10 +25,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
         <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>

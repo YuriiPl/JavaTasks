@@ -6,18 +6,35 @@ import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
+/**
+ * The main controller (MVC pattern) class
+ * @author Plaksenkov Yurii
+ * @version 0.0.1
+ * @since 0.0.1
+ */
 public class Controller {
     private NoteBook noteBook;
     private View view;
     private ResourceBundle regexps;
     Scanner scanner;
 
+    /**
+     * Constructor
+     * @param model
+     * @param view
+     */
     public Controller(NoteBook model, View view) {
         this.noteBook = model;
         this.view = view;
         scanner = new Scanner(System.in);
     }
 
+    /**
+     * Main method.
+     * It checks input, creates NoteBookRecord and puts this one to model
+     * @since 0.0.1
+     * @see NoteBookRecord
+     */
     public void processRegistration(){
         String userInput;
         NoteBookRecord record = new NoteBookRecord();
@@ -59,7 +76,7 @@ public class Controller {
 
         GroupsEnum group;
         view.inputEnterGroupMessage();
-        while((group=toGroup(scanner.nextLine()))==GroupsEnum.ERROR_GROUP) {
+        while((group=toGroup(scanner.nextLine()))==GroupsEnum.UNKNOWN) {
             view.inputWrongDataMessage();
             view.inputEnterGroupMessage();
         }
@@ -146,70 +163,135 @@ public class Controller {
 
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return true if, and only if, userInput string matches the given regular expression
+     */
     boolean checkLastName(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.lastname"));
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return true if, and only if, userInput string matches the given regular expression
+     */
     boolean checkFirstName(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.firstname"));
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return true if, and only if, userInput string matches the given regular expression
+     */
     boolean checkPatronomic(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.patronymic"));
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return true if, and only if, userInput string matches the given regular expression
+     */
     boolean checkNickName(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.nickname"));
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return true if, and only if, userInput string matches the given regular expression
+     */
     boolean checkComment(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.comment"));
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return true if, and only if, userInput string matches the given regular expression
+     */
     boolean checkHomePhone(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.homephonenumber"));
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return true if, and only if, userInput string matches the given regular expression
+     */
     boolean checkMobilePhone(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.homemobilenumber"));
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return true if userInput string matches the given regular expression, or if userInput is empty
+     */
     boolean checkMobilePhone2(String userInput){
         if(userInput.length()==0)return true;
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.homemobilenumber"));
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return GroupsEnum. If userInput string doesn't match the given regular expression return GroupsEnum.ERROR_GROUP
+     * @see GroupsEnum
+     */
     GroupsEnum toGroup(String userInput){
         if (userInput.matches(TextFactory.getRegExpString("check.string.regexp.group.admin"))) return GroupsEnum.ADMIN;
         if (userInput.matches(TextFactory.getRegExpString("check.string.regexp.group.manager"))) return GroupsEnum.MANAGER;
         if (userInput.matches(TextFactory.getRegExpString("check.string.regexp.group.user"))) return GroupsEnum.USER;
-        return GroupsEnum.ERROR_GROUP;
+        return GroupsEnum.UNKNOWN;
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return true if, and only if, userInput string matches the given regular expression
+     */
     boolean checkEmail(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.email"));
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return true if, and only if, userInput string matches the given regular expression
+     */
     boolean checkSkype(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.skype"));
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return true if, and only if, userInput string matches the given regular expression
+     */
     boolean checkZipCode(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.zipcode"));
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return true if, and only if, userInput string matches the given regular expression
+     */
     boolean checkCity(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.city"));
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return true if, and only if, userInput string matches the given regular expression
+     */
     boolean checkStreet(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.street"));
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return true if, and only if, userInput string matches the given regular expression
+     */
     boolean checkHouseNumber(String userInput){
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.housenumber"));
     }
 
+    /**
+     * @param userInput User input from scanner
+     * @return true if userInput string matches the given regular expression, or if userInput is empty
+     */
     boolean checkFlatNumber(String userInput){
         if(userInput.length()==0)return true;
         return userInput.matches(TextFactory.getRegExpString("check.string.regexp.flatnumber"));

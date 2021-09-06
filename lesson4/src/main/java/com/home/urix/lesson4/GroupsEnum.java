@@ -1,7 +1,11 @@
 package com.home.urix.lesson4;
 
-import java.util.Locale;
-
+/**
+ * Groups type enum
+ * @author Plaksenkov Yurii
+ * @version 0.0.1
+ * @since 0.0.1
+ */
 public enum GroupsEnum {
-    ADMIN,MANAGER,USER,ERROR_GROUP
+    ADMIN, MANAGER, USER, UNKNOWN
 }

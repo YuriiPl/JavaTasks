@@ -70,7 +70,7 @@ public class Controller {
         }
         record.setGroup(group);
 
-        record.setHomePhone(getStringFromScanner("input.string.data.phone.number","check.string.regexp.homemobilenumber"));
+        record.setHomePhone(getStringFromScanner("input.string.data.phone.number","check.string.regexp.homephonenumber"));
 
         record.setMobPhone(getStringFromScanner("input.string.data.phone.mobile.number","check.string.regexp.homemobilenumber"));
 

@@ -13,6 +13,17 @@ import java.util.ListIterator;
 public class NoteBook {
 
     private List<NoteBookRecord> recordsList = new ArrayList<>();
+
+    public NoteBook(){
+        //Filling the "database" to emulate the situation with the existing login
+        NoteBookRecord nr = new NoteBookRecord();
+        nr.setNickName("Nick1");
+        recordsList.add(nr);
+        nr = new NoteBookRecord();
+        nr.setNickName("Нік1");
+        recordsList.add(nr);
+    }
+
     /**
      * Add user object to model
      * @param record - The added user

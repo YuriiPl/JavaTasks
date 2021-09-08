@@ -178,4 +178,15 @@ public class NoteBookRecord {
             this.flatNum = flatNum;
         }
     }
+
+    @Override
+    public String toString(){
+        return "[Lastname=" +
+                getLastname() +
+                ", Firstname=" +
+                getFirstname() +
+                ", Nick=" +
+                getNickName() +
+                "]";
+    }
 }

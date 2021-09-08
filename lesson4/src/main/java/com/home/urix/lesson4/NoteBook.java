@@ -2,6 +2,7 @@ package com.home.urix.lesson4;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 
 /**
  * Records container
@@ -16,7 +17,21 @@ public class NoteBook {
      * Add user object to model
      * @param record - The added user
      */
-    public void insertRecord(NoteBookRecord record){
+    public void insertRecord(NoteBookRecord record) throws LoginExistsException{
+        if(checkIfLoginAlreadyExists(record.getNickName())){
+            throw new LoginExistsException(record);
+        }
         recordsList.add(record);
+    }
+
+    private boolean checkIfLoginAlreadyExists(String nickName) {
+        ListIterator<NoteBookRecord> it = recordsList.listIterator();
+        while (it.hasNext()){
+            NoteBookRecord record=it.next();
+            if(record.getNickName().equals(nickName)){
+                return true;
+            }
+        }
+        return false;
     }
 }

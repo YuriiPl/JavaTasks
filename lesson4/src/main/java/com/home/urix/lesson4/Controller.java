@@ -13,8 +13,8 @@ import java.util.Scanner;
  * @since 0.0.1
  */
 public class Controller {
-    private NoteBook noteBook;
-    private View view;
+    private final NoteBook noteBook;
+    private final View view;
     private ResourceBundle regexps;
     Scanner scanner;
 
@@ -60,12 +60,9 @@ public class Controller {
         }
         record.setPatronymic(userInput);
 
-        view.inputNicknameMessage();
-        while(!checkNickName(userInput=scanner.nextLine())) {
-            view.inputWrongDataMessage();
-            view.inputNicknameMessage();
-        }
-        record.setNickName(userInput);
+
+        //It needs refactoring
+        record.setNickName(getNickName());
 
         view.inputCommentMessage();
         while(!checkComment(userInput=scanner.nextLine())) {
@@ -159,8 +156,28 @@ public class Controller {
 
         record.setChangedDate(new Date());
 
-        noteBook.insertRecord(record);
+        boolean isNotInserted=true;
+        while (isNotInserted) {
+            try {
+                noteBook.insertRecord(record);
+                isNotInserted = false;
+            } catch (LoginExistsException e) {
+                view.loginExistsMessage();
+                view.printString(e.getRecord().toString());
+                record.setNickName(getNickName());
+            }
+        }
 
+    }
+
+    private String getNickName() {
+        view.inputNicknameMessage();
+        String userInput;
+        while(!checkNickName(userInput=scanner.nextLine())) {
+            view.inputWrongDataMessage();
+            view.inputNicknameMessage();
+        }
+        return userInput;
     }
 
     /**

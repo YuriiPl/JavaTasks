@@ -1,10 +1,19 @@
-package com.home.urix.lesson4;
+package com.home.urix.lesson4.Controller;
 
 
+
+import com.home.urix.lesson4.Model.GroupsEnum;
+import com.home.urix.lesson4.Model.LoginExistsException;
+import com.home.urix.lesson4.Model.NoteBook;
+import com.home.urix.lesson4.Model.NoteBookRecord;
+import com.home.urix.lesson4.View.TextConstant;
+import com.home.urix.lesson4.View.TextFactory;
+import com.home.urix.lesson4.View.View;
 
 import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.Scanner;
+
 
 /**
  * The main controller (MVC pattern) class
@@ -51,15 +60,15 @@ public class Controller {
         String userInput;
         NoteBookRecord record = new NoteBookRecord();
 
-        record.setLastname(getStringFromScanner("input.string.data.lastname","check.string.regexp.lastname"));
+        record.setLastname(getStringFromScanner(TextConstant.LAST_NAME,RegexContainer.REGEX_LAST_NAME));
 
-        record.setFirstname(getStringFromScanner("input.string.data.firstname","check.string.regexp.firstname"));
+        record.setFirstname(getStringFromScanner(TextConstant.FIRST_NAME,RegexContainer.REGEX_FIRST_NAME));
 
-        record.setPatronymic(getStringFromScanner("input.string.data.patronymic","check.string.regexp.patronymic"));
+        record.setPatronymic(getStringFromScanner(TextConstant.PATRONYMIC,RegexContainer.REGEX_PATRONYMIC));
 
-        record.setNickName(getStringFromScanner("input.string.data.nickname","check.string.regexp.nickname"));
+        record.setNickName(getStringFromScanner(TextConstant.NICKNAME,RegexContainer.REGEX_NICKNAME));
 
-        record.setComment(getStringFromScanner("input.string.data.comment","check.string.regexp.comment"));
+        record.setComment(getStringFromScanner(TextConstant.COMMENT,RegexContainer.REGEX_COMMENT));
 
         //need to come up with something original
         GroupsEnum group;
@@ -70,27 +79,27 @@ public class Controller {
         }
         record.setGroup(group);
 
-        record.setHomePhone(getStringFromScanner("input.string.data.phone.number","check.string.regexp.homephonenumber"));
+        record.setHomePhone(getStringFromScanner(TextConstant.PHONE_NUMBER,RegexContainer.REGEX_HOME_MOBILE_PHONE_NUMBER));
 
-        record.setMobPhone(getStringFromScanner("input.string.data.phone.mobile.number","check.string.regexp.homemobilenumber"));
+        record.setMobPhone(getStringFromScanner(TextConstant.PHONE_MOBILE_NUMBER,RegexContainer.REGEX_HOME_MOBILE_PHONE_NUMBER));
 
-        record.setSecondMobilePhone(getStringFromScanner("input.string.data.phone.mobile.number.opt","check.string.regexp.homemobilenumber.opt"));
+        record.setSecondMobilePhone(getStringFromScanner(TextConstant.PHONE_MOBILE_NUMBER_OPTIONAL,RegexContainer.REGEX_HOME_MOBILE_PHONE_NUMBER_OPT));
 
-        record.setEmail(getStringFromScanner("input.string.data.email","check.string.regexp.email"));
+        record.setEmail(getStringFromScanner(TextConstant.EMAIL_DATA,RegexContainer.REGEX_EMAIL));
 
-        record.setSkype(getStringFromScanner("input.string.data.skype","check.string.regexp.skype"));
+        record.setSkype(getStringFromScanner(TextConstant.SKYPE_DATA,RegexContainer.REGEX_SKYPE));
 
         NoteBookRecord.Address address = record.new Address();
 
-        address.setZipCode(getStringFromScanner("input.string.data.address.zipcode","check.string.regexp.zipcode"));
+        address.setZipCode(getStringFromScanner(TextConstant.ZIPCODE_DATA,RegexContainer.REGEX_ZIPCODE));
 
-        address.setCity(getStringFromScanner("input.string.data.address.city","check.string.regexp.city"));
+        address.setCity(getStringFromScanner(TextConstant.CITY_DATA,RegexContainer.REGEX_CITY));
 
-        address.setStreet(getStringFromScanner("input.string.data.address.street","check.string.regexp.street"));
+        address.setStreet(getStringFromScanner(TextConstant.STREET_DATA,RegexContainer.REGEX_STREET));
 
-        address.setHouseNum(getStringFromScanner("input.string.data.address.housenumber","check.string.regexp.housenumber"));
+        address.setHouseNum(getStringFromScanner(TextConstant.HOUSE_NUMBER_DATA,RegexContainer.REGEX_HOUSE_NUMBER));
 
-        address.setFlatNum(getStringFromScanner("input.string.data.address.flatnumber","check.string.regexp.flatnumber"));
+        address.setFlatNum(getStringFromScanner(TextConstant.FLAT_NUMBER_DATA,RegexContainer.REGEX_HOUSE_FLAT_NUMBER));
 
         record.setAddress(address);
 
@@ -107,7 +116,7 @@ public class Controller {
                 view.loginExistsMessage();
                 view.printString(e.getRecord().toString());
                 //record.setNickName(getNickName()); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                record.setNickName(getStringFromScanner("input.string.data.nickname","check.string.regexp.nickname"));
+                record.setNickName(getStringFromScanner(TextConstant.NICKNAME,RegexContainer.REGEX_NICKNAME));
             }
         }
 
@@ -119,9 +128,9 @@ public class Controller {
      * @see GroupsEnum
      */
     GroupsEnum toGroup(String userInput){
-        if (userInput.matches(TextFactory.getRegExpString("check.string.regexp.group.admin"))) return GroupsEnum.ADMIN;
-        if (userInput.matches(TextFactory.getRegExpString("check.string.regexp.group.manager"))) return GroupsEnum.MANAGER;
-        if (userInput.matches(TextFactory.getRegExpString("check.string.regexp.group.user"))) return GroupsEnum.USER;
+        if (userInput.matches(TextFactory.getRegExpString(RegexContainer.REGEX_ADMIN))) return GroupsEnum.ADMIN;
+        if (userInput.matches(TextFactory.getRegExpString(RegexContainer.REGEX_MANAGER))) return GroupsEnum.MANAGER;
+        if (userInput.matches(TextFactory.getRegExpString(RegexContainer.REGEX_USER))) return GroupsEnum.USER;
         return GroupsEnum.UNKNOWN;
     }
 

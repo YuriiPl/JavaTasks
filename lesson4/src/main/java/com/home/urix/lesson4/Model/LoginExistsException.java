@@ -1,4 +1,4 @@
-package com.home.urix.lesson4;
+package com.home.urix.lesson4.Model;
 
 public class LoginExistsException extends Exception {
     NoteBookRecord record;

@@ -1,4 +1,4 @@
-package com.home.urix.lesson4;
+package com.home.urix.lesson4.Model;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -131,7 +131,7 @@ public class NoteBookRecord {
         this.changedDate = changedDate;
     }
 
-    class Address{
+    public class Address{
         private String zipCode;
         private String city;
         private String street;

@@ -1,4 +1,4 @@
-package com.home.urix.lesson4;
+package com.home.urix.lesson4.Model;
 
 /**
  * Groups type enum

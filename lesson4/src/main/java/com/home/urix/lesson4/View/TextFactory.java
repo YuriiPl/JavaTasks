@@ -1,4 +1,4 @@
-package com.home.urix.lesson4;
+package com.home.urix.lesson4.View;
 
 import java.util.Locale;
 import java.util.ResourceBundle;

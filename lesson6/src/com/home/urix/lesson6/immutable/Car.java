@@ -35,4 +35,11 @@ public final class Car {
         return new Car(getYear(),getColor(),engine);
     }
 
+    @Override
+    public boolean equals(Object obj){
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Car car = (Car) obj;
+        return year == car.year && color.equals(car.color) && engine.equals(car.engine);
+    }
 }

@@ -25,5 +25,11 @@ public class Engine {
         this.manufacturer = manufacturer;
     }
 
-
+    @Override
+    public boolean equals(Object obj){
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Engine engine = (Engine) obj;
+        return this.horsePower == engine.horsePower && this.manufacturer.equals(engine.manufacturer);
+    }
 }

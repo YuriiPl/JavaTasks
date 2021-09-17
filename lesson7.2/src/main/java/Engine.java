@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public interface Engine {
+public interface Engine {
+    void startEngine();
+    void stopEngine();
+    int noiseLevel();
 }

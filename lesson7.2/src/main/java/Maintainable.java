@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public interface Tank {
+public interface Maintainable {
+    void changeOil();
+    void tuneUp();
 }

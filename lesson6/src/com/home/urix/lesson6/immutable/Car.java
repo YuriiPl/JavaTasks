@@ -1,5 +1,7 @@
 package com.home.urix.lesson6.immutable;
 
+import java.util.Objects;
+
 public final class Car {
     private final int year;
     private final String color;
@@ -41,5 +43,10 @@ public final class Car {
         if (obj == null || getClass() != obj.getClass()) return false;
         Car car = (Car) obj;
         return year == car.year && color.equals(car.color) && engine.equals(car.engine);
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(year,color,engine);
     }
 }

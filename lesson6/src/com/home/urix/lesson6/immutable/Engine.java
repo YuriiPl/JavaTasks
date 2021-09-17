@@ -1,5 +1,7 @@
 package com.home.urix.lesson6.immutable;
 
+import java.util.Objects;
+
 public class Engine {
     private int horsePower;
     private String manufacturer;
@@ -31,5 +33,10 @@ public class Engine {
         if (obj == null || getClass() != obj.getClass()) return false;
         Engine engine = (Engine) obj;
         return this.horsePower == engine.horsePower && this.manufacturer.equals(engine.manufacturer);
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(horsePower,manufacturer);
     }
 }

@@ -1,5 +1,6 @@
 package com.home.urix.lesson4;
 
+import com.home.urix.lesson4.View.TextFactory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

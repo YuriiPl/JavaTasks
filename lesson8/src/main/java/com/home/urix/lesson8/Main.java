@@ -14,7 +14,9 @@ public class Main {
         ArrayList<Integer> array = new ArrayList<Integer>();
         new Random().ints(25, -10,10).forEach(array::add);
         System.out.println(array);
-        System.out.println(Calculator.calc(array));
+        System.out.println(Calculator.calc1(array));
+        System.out.println(Calculator.calc2(array));
+        System.out.println(Calculator.calc3(array));
 
         //Task2
         MyArrayList<Integer> myArrayList = new MyArrayList<>();

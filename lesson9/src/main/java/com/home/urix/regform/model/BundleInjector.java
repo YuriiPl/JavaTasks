@@ -1,5 +1,6 @@
 package com.home.urix.regform.model;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -8,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 
+@Component
 public class BundleInjector implements HandlerInterceptor {
     private final String EN="en";
     private final String UK_UA="uk_UA";

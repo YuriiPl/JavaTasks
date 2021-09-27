@@ -20,19 +20,10 @@ import java.util.ResourceBundle;
 @Controller
 public class PagesController {
 
-//    final MessageSource messageSource;
-
-//    public PagesController(@Qualifier("siteMessages") MessageSource messageSource) {
-//        this.messageSource = messageSource;
-//    }
 
     @GetMapping("/")
     public String mainPage(Model model)
     {
-//        model.addAttribute("title", messageSource. getMessage("title", new Object[0], Locale.ENGLISH));
-//        model.addAttribute("message", messageSource. getMessage("message", new Object[0], Locale.forLanguageTag("uk_UA")));
-        //model.addAttribute("msg", ResourceBundle.getBundle("i18n",new Locale("uk_UA")));
-        //<div>${msg["message"]}</div>
         return "index";
     }
 
@@ -47,7 +38,7 @@ public class PagesController {
     }
 
     @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity handleRuntimeException(RuntimeException ex) {
-        return new ResponseEntity(HttpStatus.BAD_REQUEST);
+    public ResponseEntity<HttpStatus> handleRuntimeException(RuntimeException ex) {
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 }

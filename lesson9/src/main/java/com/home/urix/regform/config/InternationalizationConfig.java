@@ -1,22 +1,21 @@
 package com.home.urix.regform.config;
 
-import com.home.urix.regform.model.MustacheLocalizationMessageInterceptor;
-import com.home.urix.regform.model.PageLocaleResolver;
+
+import com.home.urix.regform.model.BundleInjector;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.MessageSource;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
-//@Slf4j
-//@Configuration
-//public class InternationalizationConfig implements WebMvcConfigurer {
-//
-//    @Bean(name = "localeResolver")
+@Slf4j
+@Configuration
+public class InternationalizationConfig implements WebMvcConfigurer {
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new BundleInjector());
+    }
+    //    @Bean(name = "localeResolver")
 //    public LocaleResolver getLocaleResolver()  {
 ////        CookieLocaleResolver resolver = new CookieLocaleResolver();
 ////        //By default, the locale resolver will obtain the locale code from the HTTP header. To force a default locale, we need to set it on the localeResolver():
@@ -25,7 +24,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 //        PageLocaleResolver resolver = new PageLocaleResolver();
 //        return resolver;
 //    }
-//
+
 //    @Override
 //    public void addInterceptors(InterceptorRegistry registry) {
 ////        LocaleChangeInterceptor localeInterceptor = new LocaleChangeInterceptor();
@@ -36,16 +35,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 ////        registry.addInterceptor(new MyInterceptorJustForTest());
 ////        registry.addInterceptor(new PageCookieInterceptor());
 //
-//        registry.addInterceptor(getLocalizationMessageInterceptor());
+////        registry.addInterceptor(getLocalizationMessageInterceptor());
 //
 //    }
 //
 //
-//    @Bean(name = "messageSource")
+//    @Bean(name="siteMessages")
 //    public MessageSource messageSource() {
-//        ReloadableResourceBundleMessageSource messageSource =
-//                new ReloadableResourceBundleMessageSource();
-//        messageSource.setBasename("classpath:i18n/");
+//        ResourceBundleMessageSource messageSource =
+//                new ResourceBundleMessageSource();
+//        messageSource.setBasename("i18n");
 //        messageSource.setUseCodeAsDefaultMessage(true);
 //        messageSource.setDefaultEncoding("UTF-8");
 //        messageSource.setCacheSeconds(0);
@@ -58,5 +57,26 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 //        lmi.setLocaleResolver(getLocaleResolver());
 //        lmi.setMessageSource(messageSource());
 //        return lmi;
+//    }
+}
+
+//@Configuration
+//public class InternationalizationConfig implements WebMvcConfigurer {
+//
+//    @Bean
+//    public LocaleResolver localeResolver() {
+//        return new CookieLocaleResolver();
+//    }
+//
+//    @Bean
+//    public LocaleChangeInterceptor localeInterceptor() {
+//        LocaleChangeInterceptor localeInterceptor = new LocaleChangeInterceptor();
+//        localeInterceptor.setParamName("lang");
+//        return localeInterceptor;
+//    }
+//
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(localeInterceptor());
 //    }
 //}

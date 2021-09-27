@@ -16,6 +16,10 @@
                 <input required type="email" class="form-control" id="user-email" name="email" aria-describedby="emailHelp" placeholder="${i18n["regform.placeholder.email"]}">
                 <small id="emailHelp" class="form-text text-muted">${i18n["regform.email.noshare"]}</small>
             </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="acceptNewsLatter" id="chkBxAccept">
+                <label class="form-check-label" for="chkBxAccept">${i18n["regform.chkbx.accept"]}</label>
+            </div>
             <div class="form-group">
                 <label for="user-login">${i18n["regform.login"]}</label>
                 <input required type="text" class="form-control" id="user-login" name="login" placeholder="${i18n["regform.placeholder.login"]}">
@@ -23,10 +27,6 @@
             <div class="form-group">
                 <label for="user-passwd">${i18n["regform.password"]}</label>
                 <input required type="password" class="form-control" id="user-passwd" name="password" placeholder="${i18n["regform.placeholder.password"]}">
-            </div>
-            <div class="form-check">
-                <input required type="checkbox" class="form-check-input" name="accept" id="chkBxAccept">
-                <label class="form-check-label" for="chkBxAccept">${i18n["regform.chkbx.accept"]}</label>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

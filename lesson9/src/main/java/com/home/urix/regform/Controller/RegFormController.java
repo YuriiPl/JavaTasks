@@ -13,15 +13,10 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/api")
 public class RegFormController {
 
-//    private final RegFormService regFormService;
-//    @Autowired
-//    public RegFormController(RegFormService regFormService) {
-//        this.regFormService = regFormService;
-//    }
-
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(value = "/reg_form", method = RequestMethod.POST)
     public void registrationFormController(User note){
+
         log.info("{}", note);
     }
 

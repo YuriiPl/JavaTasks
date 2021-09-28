@@ -1,5 +1,6 @@
 package com.home.urix.regform.Controller;
 
+import com.home.urix.regform.dto.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -28,7 +30,7 @@ public class PagesController {
     }
 
     @RequestMapping("/form")
-    public String regForm(){
+    public String regForm(Model model){
         return "reg_form";
     }
 

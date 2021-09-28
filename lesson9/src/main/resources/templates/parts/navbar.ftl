@@ -1,5 +1,4 @@
 <#macro navbar>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,19 +12,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/form">${i18n["menu.registration"]}</a>
                     </li>
-                    <#--                <li class="nav-item dropdown">-->
-                    <#--                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
-                    <#--                        ${i18n["language.top"]}-->
-                    <#--                    </a>-->
-                    <#--                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-                    <#--                        <li onclick="changeLang('en')"><a class="dropdown-item" href="#">${i18n["language.en"]}</a></li>-->
-                    <#--                        <li onclick="changeLang('uk_UA')"><a class="dropdown-item" href="#">${i18n["language.ua"]}</a></li>-->
-                    <#--                        <li><hr class="dropdown-divider"></li>-->
-                    <#--                        <li><a class="dropdown-item" href="#">Something else here</a></li>-->
-                    <#--                    </ul>-->
-                    <#--                </li>-->
                 </ul>
-
                 <ul class="navbar-nav d-flex">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,7 +27,4 @@
             </div>
         </div>
     </nav>
-
-
-
 </#macro>

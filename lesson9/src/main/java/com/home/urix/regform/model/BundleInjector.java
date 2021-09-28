@@ -32,7 +32,7 @@ public class BundleInjector implements HandlerInterceptor {
             lang=Arrays.stream(request.getCookies())
                     .filter(c -> Objects.equals(c.getName(), "lang"))
                     .map(Cookie::getValue)
-                    .filter(s->Arrays.asList(EN,UK_UA).contains(s))
+                    .filter(bundleHashMap::containsKey)
                     .findFirst().orElse(EN);
         } catch (NullPointerException e){
             lang=EN;

@@ -20,8 +20,12 @@ import java.util.ResourceBundle;
 @Controller
 public class PagesController {
 
+    private final UserRepository userRepo;
+
     @Autowired
-    private UserRepository userRepo;
+    public PagesController(UserRepository userRepo) {
+        this.userRepo = userRepo;
+    }
 
     @GetMapping("/")
     public String mainPage(Model model)

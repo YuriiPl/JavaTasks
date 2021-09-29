@@ -14,9 +14,12 @@ import org.springframework.web.bind.annotation.*;
 public class RegFormController {
 
     @ResponseStatus(HttpStatus.CREATED)
+//    @ResponseStatus(
+//            value = HttpStatus.CONFLICT//,
+//            //reason = "User with this email already exists"
+//    )
     @RequestMapping(value = "/reg_form", method = RequestMethod.POST)
     public void registrationFormController(User note){
-
         log.info("{}", note);
     }
 

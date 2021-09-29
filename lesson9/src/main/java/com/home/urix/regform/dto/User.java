@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Entity // This tells Hibernate to make a table out of this class
 public class User {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     long id;
 
     @Column(name = "passwd")
@@ -25,7 +25,7 @@ public class User {
     @Column(name = "mail")
     private String email;
 
-    @Column(name = "userlogin")
+    @Column(name = "userlogin", unique = true)
     private String login;
 
     @Column(name = "newsaccept")

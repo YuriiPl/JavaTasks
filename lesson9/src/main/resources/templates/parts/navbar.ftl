@@ -18,7 +18,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             ${i18n["language.top"]}
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end"" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li onclick="changeLang('en')"><a class="dropdown-item" href="#">${i18n["language.en"]}</a></li>
                             <li onclick="changeLang('uk_UA')"><a class="dropdown-item" href="#">${i18n["language.ua"]}</a></li>
                         </ul>

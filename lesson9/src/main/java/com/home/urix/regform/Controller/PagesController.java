@@ -1,7 +1,9 @@
 package com.home.urix.regform.Controller;
 
 import com.home.urix.regform.dto.User;
+import com.home.urix.regform.repos.UserRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -18,6 +20,9 @@ import java.util.ResourceBundle;
 @Controller
 public class PagesController {
 
+    @Autowired
+    private UserRepository userRepo;
+
     @GetMapping("/")
     public String mainPage(Model model)
     {
@@ -32,6 +37,13 @@ public class PagesController {
     @RequestMapping("/form")
     public String regForm(Model model){
         return "reg_form";
+    }
+
+    @RequestMapping("/users")
+    public String showUsers(Model model){
+        Iterable<User> all = userRepo.findAll();
+        model.addAttribute("users",all);
+        return "userslist";
     }
 
     @ExceptionHandler(RuntimeException.class)

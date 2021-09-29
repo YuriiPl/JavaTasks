@@ -6,7 +6,10 @@
 
         <h1>${i18n["regform.title"]}</h1>
 
-        <form action='/api/reg_form' method="post" onsubmit="fetchPostJson(this,alert); return false">
+        <form action='/api/reg_form' method="post" onsubmit="fetchPostJson(this,
+                                                    function (json) {document.getElementById('iframe1').contentWindow.location.reload(); this.reset();},
+                                                    function (json) {alert(json.message);}
+                                                    ); return false">
             <div class="form-group">
                 <label for="user-name">${i18n["regform.yourname"]}</label>
                 <input required type="text" class="form-control" id="user-name" name="name" placeholder="${i18n["regform.placeholder.yourname"]}">
@@ -33,4 +36,6 @@
 
     </div>
 </div>
+    <div>Just for test</div>
+    <iframe id="iframe1" src="/users" width="100%" height="700" />
 </@c.page>

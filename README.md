@@ -10,3 +10,7 @@
 + :white_check_mark: [Homework №7.1](https://github.com/YuriiPl/JavaTasks/tree/master/lesson7.1) <details close> <summary>Треугольник</summary>___Задание:___<br>На основе существующего кода создать класс "треугольник"</details>
 + :white_check_mark: [Homework №7.2](https://github.com/YuriiPl/JavaTasks/tree/master/lesson7.2) <details close> <summary>Interfaces</summary>___Задание:___<br>Создать объект автомобиль и к этому объекту создать несколько интерфейсов</details>
 + :white_check_mark: [Homework №8](https://github.com/YuriiPl/JavaTasks/tree/master/lesson8) <details close> <summary>Collection</summary>___Задание1:___<br>Есть ArrayList<Integer> - ов. За один проход подсчитать количество повторений каждого элемента.<br>___Задание2:___<br>Написать реализацию коллекции (например, ArrayList) в которую можно добавлять данные и нельзя удалять.</details>
++ :white_check_mark: [Homework №9](https://github.com/YuriiPl/JavaTasks/tree/master/lesson9)<details close> <summary>Регистрационная форма (Spring Boot)</summary>___Задание:___<br></details>
++ :white_check_mark: [Homework №9.1](https://github.com/YuriiPl/JavaTasks/tree/master/lesson9.1)<details close> <summary>Stream</summary>___Задание:___<br>Сделать массив int. Из него получить IntStream. Для него<br>1. Найти среднее значение элементов массива<br>2. Найти минимальный элемент, значение и индекс<br>3. Посчитать количество элементов равных нулю<br>4. Посчитать количество элементов больше нуля<br>5. Помножить элементы массива на число</details>
+  
+  

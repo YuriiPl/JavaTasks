@@ -3,6 +3,9 @@ function fetchPostJson(form, okFunc, errorFunc){
     let data = new FormData();
     for (let item of elements) {
         if(!item.name)continue;
+        if(item.type==="radio" || item.type==="checkbox"){
+            if(!item.checked)continue;
+        }
         data.append(item.name, item.value);
     }
     fetch(form.action, {

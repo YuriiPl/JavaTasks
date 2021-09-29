@@ -22,13 +22,23 @@ public class User {
     @Column(name = "username")
     private String name;
 
-    @Column(name = "mail")
+    @Column(name = "mail", unique = true)
     private String email;
 
     @Column(name = "userlogin", unique = true)
     private String login;
 
     @Column(name = "newsaccept")
-    boolean acceptNewsLatter;
+    private boolean acceptNewsLatter;
+
+    @Column(name = "sex")
+    @Enumerated(EnumType.STRING)
+    private UserSex userSex;
+
+//    @Column(name = "newsaccept")
+//    private String acceptNewsLatter;
+//
+//    @Column(name = "sex")
+//    private String userSex;
 
 }

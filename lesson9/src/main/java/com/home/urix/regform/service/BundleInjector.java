@@ -1,7 +1,8 @@
-package com.home.urix.regform.model;
+package com.home.urix.regform.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -11,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 
 @Slf4j
-@Component
+@Service
 public class BundleInjector implements HandlerInterceptor {
     private final String EN="en";
     private final String UK_UA="uk_UA";
@@ -26,6 +27,7 @@ public class BundleInjector implements HandlerInterceptor {
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+        log.info("BundleInjector postHandle "+handler.getClass().getName());
         if(modelAndView==null)return;
         String lang;
         try {
@@ -38,7 +40,5 @@ public class BundleInjector implements HandlerInterceptor {
             lang=EN;
         }
         modelAndView.addObject("i18n",bundleHashMap.get(lang));
-
-//        log.info(bundleHashMap.get(lang).);
     }
 }

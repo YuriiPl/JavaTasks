@@ -9,7 +9,25 @@
         <form action='/api/reg_form' name="sendForm" method="post" onsubmit="fetchPostJson(this,
                                                     function (json) {
                                                         document.getElementById('iframe1').contentWindow.location.reload(); this.document.forms.item(sendForm).reset();},
-                                                        function (json) {alert(json.message);}
+                                                        function (json) {
+                                                            let modalWindow = new bootstrap.Modal(document.getElementById('modalWindow'), {});
+                                                            const map1 = new Map();
+                                                            map1.set('wrongSex', '${i18n["regform.wrongSex"]}');
+                                                            map1.set('wrongAcceptNews', '${i18n["regform.wrongAcceptNews"]}');
+                                                            map1.set('wrongLoginSize', '${i18n["regform.wrongLoginSize"]}');
+                                                            map1.set('wrongLogin', '${i18n["regform.wrongLogin"]}');
+                                                            map1.set('wrongEmail', '${i18n["regform.wrongEmail"]}');
+                                                            map1.set('wrongUsername', '${i18n["regform.wrongUsername"]}');
+                                                            map1.set('wrongPassword', '${i18n["regform.wrongPassword"]}');
+                                                            map1.set('user_email_exist', '${i18n["regform.userEmailExists"]}');
+                                                            let h='';
+                                                            for (let i in json.message) {
+                                                                // console.log(json.message[i]+' '+map1.get(json.message[i]));
+                                                                h += map1.get(json.message[i])+'<br>';
+                                                            }
+                                                            document.querySelector('#modalWindow .modal-body').innerHTML=h;
+                                                            modalWindow.show();
+                                                        }
                                                     ); return false">
             <div class="form-group">
                 <label for="user-name">${i18n["regform.yourname"]}</label>
@@ -48,6 +66,25 @@
 
     </div>
 </div>
+
+    <!-- Модальное окно -->
+    <div class="modal fade" id="modalWindow" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Заголовок модального окна</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div>Just for test</div>
     <iframe id="iframe1" src="/users" width="100%" height="700" />
 </@c.page>

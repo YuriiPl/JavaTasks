@@ -1,6 +1,6 @@
 package com.home.urix.regform.Controller;
 
-import com.home.urix.regform.dto.User;
+import com.home.urix.regform.entity.User;
 import com.home.urix.regform.repos.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,10 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import java.util.Locale;
-import java.util.ResourceBundle;
 
 @Slf4j
 @Controller

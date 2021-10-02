@@ -19,7 +19,7 @@ function fetchPostJson(form, okFunc, errorFunc){
         response.json().then(data => {
             func(data);
         }).catch(function () {
-            func("{\"message\" : \"\"}");
+            func("{\"message\" : \"[unknown_error]\"}");
         })
     });
     return false;

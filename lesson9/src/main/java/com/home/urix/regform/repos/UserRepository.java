@@ -1,6 +1,6 @@
 package com.home.urix.regform.repos;
 
-import com.home.urix.regform.dto.User;
+import com.home.urix.regform.entity.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

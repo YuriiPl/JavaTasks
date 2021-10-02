@@ -40,9 +40,9 @@ public class User {
     @Column(name = "newsaccept")
     private boolean acceptNewsLatter;
 
-    @Column(name = "sex")
     @NotNull(message = "wrongGender")
     @Enumerated(EnumType.STRING)
+    @Column(name = "sex")
     private UserSex userSex;
 
 }

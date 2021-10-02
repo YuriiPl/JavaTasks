@@ -33,17 +33,15 @@
                 <label for="user-name">${i18n["regform.yourname"]}</label>
                 <input required type="text" class="form-control" id="user-name" name="name" placeholder="${i18n["regform.placeholder.yourname"]}">
             </div>
-            <tr>
-                <td>${i18n["regform.sex"]}:</td>
-                <td>
+            <div class="form-group">
+                <span>${i18n["regform.sex"]}:</span>
                     <input type="radio" id="contactChoice1" name="userSex" value="MALE" checked>
                     <label for="contactChoice1">${i18n["regform.male"]} </label>
                     <input type="radio" id="contactChoice2" name="userSex" value="FEMALE">
                     <label for="contactChoice2">${i18n["regform.female"]} </label>
                     <input type="radio" id="contactChoice3" name="userSex" value="OTHER">
                     <label for="contactChoice3">${i18n["regform.other"]} </label>
-                </td>
-            </tr>
+            </div>
             <div class="form-group">
                 <label for="user-email">${i18n["regform.email"]}</label>
                 <input required type="email" class="form-control" id="user-email" name="email" aria-describedby="emailHelp" placeholder="${i18n["regform.placeholder.email"]}">

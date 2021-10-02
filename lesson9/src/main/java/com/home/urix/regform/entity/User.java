@@ -24,7 +24,7 @@ public class User {
     @Column(name = "passwd")
     private String password;
 
-    @Pattern(regexp = "^\\w{2,24}$", message = "wrongUsername")
+    @Pattern(regexp = "^(?! )(?!.* $)(?!(?:.* ){2})[a-zA-Zа-щьюяіїєґА-ЩЮЯІЇЄҐ ']{2,}$", message = "wrongUsername")
     @Column(name = "username")
     private String name;
 
@@ -32,17 +32,16 @@ public class User {
     @Column(name = "mail", unique = true)
     private String email;
 
-    @Pattern(regexp = "^\\w{2,24}$", message = "wrongLogin")
-    @Size(min = 2, max = 24, message = "wrongLoginSize")
+    @Pattern(regexp = "^[\\w\\d]+$", message = "wrongLogin")
+    @Size(min = 6, max = 24, message = "wrongLoginSize")
     @Column(name = "userlogin", unique = true)
     private String login;
 
     @Column(name = "newsaccept")
-    //@NotEmpty(message = "wrongAcceptNews")
     private boolean acceptNewsLatter;
 
     @Column(name = "sex")
-    //@NotEmpty(message = "wrongSex")
+    @NotNull(message = "wrongGender")
     @Enumerated(EnumType.STRING)
     private UserSex userSex;
 

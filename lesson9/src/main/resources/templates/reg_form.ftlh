@@ -15,9 +15,9 @@
                                                         document.getElementById('iframe1').contentWindow.location.reload(); this.document.forms.item(sendForm).reset();
                                                     },
                                                     function (json) {
+                                                console.log(json);
                                                         const map1 = new Map();
-                                                        map1.set('wrongSex', '${i18n["regform.wrongSex"]}');
-                                                        map1.set('wrongAcceptNews', '${i18n["regform.wrongAcceptNews"]}');
+                                                        map1.set('wrongGender', '${i18n["regform.wrongGender"]}');
                                                         map1.set('wrongLoginSize', '${i18n["regform.wrongLoginSize"]}');
                                                         map1.set('wrongLogin', '${i18n["regform.wrongLogin"]}');
                                                         map1.set('wrongEmail', '${i18n["regform.wrongEmail"]}');

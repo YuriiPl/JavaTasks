@@ -8,10 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import javax.validation.Valid;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
@@ -48,6 +50,6 @@ public class RegFormController {
     public ResponseEntity<Map<String,Set<String>>> handleRuntimeException(ConstraintViolationException ex) {
         log.warn("{} {}", ex.getClass(), ex.getLocalizedMessage());
         Set<String> collect = ex.getConstraintViolations().stream().map(ConstraintViolation::getMessage).collect(Collectors.toSet());
-        return new ResponseEntity<>(Collections.singletonMap("message",collect), HttpStatus.CONFLICT);
+        return new ResponseEntity<>(Collections.singletonMap("message",collect), HttpStatus.BAD_REQUEST);
     }
 }

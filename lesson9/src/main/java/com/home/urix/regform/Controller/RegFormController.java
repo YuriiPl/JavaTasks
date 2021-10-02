@@ -46,10 +46,17 @@ public class RegFormController {
         return new ResponseEntity<>(Collections.singletonMap("message",Collections.singleton("user_email_exist")), HttpStatus.CONFLICT);
     }
 
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<Map<String,Set<String>>> handleIllegalArgumentException(IllegalArgumentException ex){
+        log.error("{} {}", ex.getClass(), ex.getLocalizedMessage());
+        return new ResponseEntity<>(Collections.singletonMap("message",Collections.singleton("somethingWrong")), HttpStatus.BAD_REQUEST);
+    }
+
     @ExceptionHandler(ConstraintViolationException.class)
     public ResponseEntity<Map<String,Set<String>>> handleRuntimeException(ConstraintViolationException ex) {
         log.warn("{} {}", ex.getClass(), ex.getLocalizedMessage());
         Set<String> collect = ex.getConstraintViolations().stream().map(ConstraintViolation::getMessage).collect(Collectors.toSet());
         return new ResponseEntity<>(Collections.singletonMap("message",collect), HttpStatus.BAD_REQUEST);
     }
+
 }

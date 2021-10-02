@@ -24,6 +24,7 @@
                                                         map1.set('wrongUsername', '${i18n["regform.wrongUsername"]}');
                                                         map1.set('wrongPassword', '${i18n["regform.wrongPassword"]}');
                                                         map1.set('user_email_exist', '${i18n["regform.userEmailExists"]}');
+                                                        map1.set('somethingWrong', '${i18n["regform.somethingWrong"]}')
                                                         let h='';
                                                         for (let i in json.message) {
                                                             // console.log(json.message[i]+' '+map1.get(json.message[i]));

@@ -1,6 +1,7 @@
 <#--<#import "parts/common.ftl" as c>-->
 <#--<@c.page>-->
 
+<#import "/spring.ftl" as i18n/>
 <#import "parts/bootstrap.ftl" as bt>
 <@bt.bootstrap></@bt.bootstrap>
 
@@ -25,7 +26,7 @@
                 <td>${u.login}</td>
                 <td>${u.password}</td>
                 <td>${u.email}</td>
-                <td>${u.acceptNewsLatter?string(i18n['yes'], i18n['no'])}</td>
+                <td><#if u.acceptNewsLatter><@i18n.message "yes"/><#else><@i18n.message "no"/></#if></td>
                 <td>${u.userSex}</td>
             </tr>
         </#list>

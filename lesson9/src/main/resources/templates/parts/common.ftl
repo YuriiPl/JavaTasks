@@ -1,16 +1,15 @@
 <#macro page>
+<#import "/spring.ftl" as i18n/>
 <#import "navbar.ftl" as nb>
 <#import "bootstrap.ftl" as bt>
 
 <!DOCTYPE html>
-<html lang="${i18n["lang"]}">
+<html lang="<@i18n.message "lang"/>">
 <head>
     <#if title?has_content>
-        <title>${i18n["${title}"]}</title>
-    <#elseif i18n?keys?seq_contains("title")>
-        <title>${i18n["title"]}</title>
+        <title><@i18n.message "${title}"/>}</title>
     <#else>
-        <title></title>
+        <title><@i18n.message "title"/></title>
     </#if>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -1,6 +1,7 @@
 package com.home.urix.regform.Controller;
 
 
+import com.home.urix.regform.dto.UserDto;
 import com.home.urix.regform.entity.User;
 import com.home.urix.regform.repos.UserRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -35,8 +36,8 @@ public class RegFormController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(value = "/reg_form", method = RequestMethod.POST)
-    public void registrationFormController(User user){
-        userRepo.save(user);
+    public void registrationFormController(UserDto user){
+        userRepo.save(new User(user));
         log.info("{}", user);
     }
 

@@ -1,11 +1,10 @@
 package com.home.urix.regform.entity;
 
-import com.home.urix.regform.dto.UserDto;
+import com.home.urix.regform.dto.User;
 import lombok.*;
 
 
 import javax.persistence.*;
-import javax.validation.constraints.*;
 
 
 @Getter
@@ -15,19 +14,20 @@ import javax.validation.constraints.*;
 @Builder
 @ToString
 @Entity // This tells Hibernate to make a table out of this class
-public class User {
+public class UserDto {
+
+    public UserDto(User user){
+        this.password=user.getPassword();
+        this.name=user.getName();
+        this.email=user.getEmail();
+        this.login=user.getLogin();
+        this.acceptNewsLatter=user.isAcceptNewsLatter();
+        this.userSex=user.getUserSex();
+    }
+
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     long id;
-
-    public User(UserDto userDto){
-        this.password=userDto.getPassword();
-        this.name=userDto.getName();
-        this.email=userDto.getEmail();
-        this.login=userDto.getLogin();
-        this.acceptNewsLatter=userDto.isAcceptNewsLatter();
-        this.userSex=userDto.getUserSex();
-    }
 
     @Column(name = "passwd")
     private String password;

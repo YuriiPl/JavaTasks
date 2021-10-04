@@ -15,7 +15,7 @@ import javax.validation.constraints.*;
 @NoArgsConstructor
 @Builder
 @ToString
-public class UserDto {
+public class User {
     @NotBlank
     @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{6,24}$", message = "wrongPassword")
     private String password;

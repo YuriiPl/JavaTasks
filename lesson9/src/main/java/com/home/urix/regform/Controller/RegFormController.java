@@ -1,21 +1,18 @@
 package com.home.urix.regform.Controller;
 
 
-import com.home.urix.regform.dto.UserDto;
-import com.home.urix.regform.entity.User;
+import com.home.urix.regform.dto.User;
+import com.home.urix.regform.entity.UserDto;
 import com.home.urix.regform.repos.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
-import javax.validation.Valid;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
@@ -36,8 +33,8 @@ public class RegFormController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(value = "/reg_form", method = RequestMethod.POST)
-    public void registrationFormController(UserDto user){
-        userRepo.save(new User(user));
+    public void registrationFormController(User user){
+        userRepo.save(new UserDto(user));
         log.info("{}", user);
     }
 

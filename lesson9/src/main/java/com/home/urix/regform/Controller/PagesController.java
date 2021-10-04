@@ -1,6 +1,6 @@
 package com.home.urix.regform.Controller;
 
-import com.home.urix.regform.entity.User;
+import com.home.urix.regform.entity.UserDto;
 import com.home.urix.regform.repos.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,7 +41,7 @@ public class PagesController {
 
     @RequestMapping("/users")
     public String showUsers(Model model){
-        Iterable<User> all = userRepo.findAll();
+        Iterable<UserDto> all = userRepo.findAll();
         model.addAttribute("users",all);
         return "userslist";
     }

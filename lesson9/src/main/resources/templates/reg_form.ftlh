@@ -13,6 +13,7 @@
                                         if(inp1.value===inp2.value){
                                             fetchPostJson(this,
                                                     function (json) {
+                                                console.log(json);
                                                         document.getElementById('iframe1').contentWindow.location.reload(); this.document.forms.item(sendForm).reset();
                                                     },
                                                     function (json) {
@@ -40,7 +41,7 @@
                                             document.querySelector('#modalWindow .modal-body').innerHTML='<@i18n.message "regform.passwordMismatch"/>';
                                             modalWindow.show();
                                         }
-                                        return false">
+                                        return false;">
             <div class="form-group">
                 <label for="user-name"><@i18n.message "regform.yourname"/></label>
                 <input required type="text" class="form-control" id="user-name" name="name" placeholder="<@i18n.message "regform.placeholder.yourname"/>">
